@@ -21,12 +21,15 @@ class _IncrementButtonState extends State<IncrementButton> {
         color: Color.fromARGB(255, 157, 91, 11),
       ),
     );
-    return ElevatedButton(
-      onPressed: () {
-        widget.onPressed();
-      },
-      child: Row(
-        children: icons,
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: ElevatedButton(
+        onPressed: () {
+          widget.onPressed();
+        },
+        child: Row(
+          children: icons,
+        ),
       ),
     );
   }
