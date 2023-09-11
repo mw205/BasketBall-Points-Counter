@@ -49,8 +49,7 @@ class _PointsCounterState extends State<PointsCounter> {
         body: Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
-                image:
-                    AssetImage("images/akshay-gill-qk03WPpOS-Q-unsplash.jpg"),
+                image: NetworkImage("https://i.ibb.co/WBCfMtB/basketball.jpg"),
                 fit: BoxFit.cover,
                 opacity: 0.20),
           ),

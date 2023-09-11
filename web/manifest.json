@@ -30,6 +30,11 @@
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable"
+        },
+        {
+            "src": "../assets/images/basketball.jpg",
+            "sizes": "3024x4032",
+            "type": "image/jpg"
         }
     ]
 }
