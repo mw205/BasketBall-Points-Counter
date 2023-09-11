@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+enum Increment { one, two, three }
+
 class IncrementButton extends StatefulWidget {
   final Function onPressed;
   final int increment;
