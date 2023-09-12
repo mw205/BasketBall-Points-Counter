@@ -68,33 +68,34 @@ class _PointsCounterState extends State<PointsCounter> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Padding(
-                        padding: const EdgeInsets.all(8),
-                        child: GetBuilder(
-                          init: controllerA,
-                          builder: (controller) => Column(
-                            children: [
-                              Team(
-                                name: "Team A",
-                                points: controller.points,
-                              ),
-                              IncrementButton(
-                                  increment: 1,
-                                  onPressed: () {
-                                    controller.addOne();
-                                  }),
-                              IncrementButton(
-                                  increment: 2,
-                                  onPressed: () {
-                                    controller.addTwo();
-                                  }),
-                              IncrementButton(
-                                  increment: 3,
-                                  onPressed: () {
-                                    controller.addThree();
-                                  }),
-                            ],
+                      padding: const EdgeInsets.all(8),
+                      child: Column(
+                        children: [
+                          GetBuilder(
+                            init: controllerA,
+                            builder: (controllerA) => Team(
+                              name: "Team A",
+                              points: controllerA.points,
+                            ),
                           ),
-                        )),
+                          IncrementButton(
+                              increment: 1,
+                              onPressed: () {
+                                controllerA.addOne();
+                              }),
+                          IncrementButton(
+                              increment: 2,
+                              onPressed: () {
+                                controllerA.addTwo();
+                              }),
+                          IncrementButton(
+                              increment: 3,
+                              onPressed: () {
+                                controllerA.addThree();
+                              }),
+                        ],
+                      ),
+                    ),
                     const SizedBox(
                       height: 400,
                       child: VerticalDivider(
@@ -105,33 +106,33 @@ class _PointsCounterState extends State<PointsCounter> {
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: GetBuilder<TeamControllerB>(
-                        init: controllerB,
-                        builder: (controller) => Column(
-                          children: [
-                            Team(
+                      child: Column(
+                        children: [
+                          GetBuilder<TeamControllerB>(
+                            init: controllerB,
+                            builder: (controller) => Team(
                               name: "Team B",
                               points: controller.points,
                             ),
-                            IncrementButton(
-                                increment: 1,
-                                onPressed: () {
-                                  controller.addOne();
-                                }),
-                            IncrementButton(
-                                increment: 2,
-                                onPressed: () {
-                                  controller.addTwo();
-                                }),
-                            IncrementButton(
-                                increment: 3,
-                                onPressed: () {
-                                  controller.addThree();
-                                }),
-                          ],
-                        ),
+                          ),
+                          IncrementButton(
+                              increment: 1,
+                              onPressed: () {
+                                controllerB.addOne();
+                              }),
+                          IncrementButton(
+                              increment: 2,
+                              onPressed: () {
+                                controllerB.addTwo();
+                              }),
+                          IncrementButton(
+                              increment: 3,
+                              onPressed: () {
+                                controllerB.addThree();
+                              }),
+                        ],
                       ),
-                    )
+                    ),
                   ],
                 ),
                 ElevatedButton(
